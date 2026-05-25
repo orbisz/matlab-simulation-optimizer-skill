@@ -166,3 +166,11 @@ Use this structure for `optimization_summary.md`:
 ## Relationship to Other Skills
 
 If the task is only to audit code without editing, `simulation-paper-auditor` may be enough. If the user asks to create MATLAB code from a paper from scratch, use `paper-matlab-reproduction`. Use this skill when the central request is to optimize an existing MATLAB simulation source program while preserving paper fidelity.
+
+## Self-Evolution Mechanism
+
+After each execution of this Skill:
+
+1. Evaluate whether the output achieved the intended goal: **pass / fail**.
+2. If it fails, reflect on the cause of failure and append a “failure case + improvement suggestion” to `diary/YYYY-MM-DD.md`.
+3. If a certain improvement suggestion is repeatedly mentioned in the most recent three executions, refine it into a formal rule and submit a PR to modify this `SKILL.md`.
